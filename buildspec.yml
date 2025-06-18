@@ -10,8 +10,8 @@ phases:
     commands:
       - echo Logging in to Amazon ECR...
       - aws --version
-      - aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 767397768776.dkr.ecr.us-east-1.amazonaws.com
-      - export REPOSITORY_URI=767397768776.dkr.ecr.us-east-1.amazonaws.com/awsdevops
+      - aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 112193845642.dkr.ecr.us-east-1.amazonaws.com
+      - export REPOSITORY_URI=112193845642.dkr.ecr.us-east-1.amazonaws.com/awsdevsecops
       - export IMAGE_TAG=build-$(echo $CODEBUILD_BUILD_ID | awk -F":" '{print $2}')
 
   build:
