@@ -11,9 +11,9 @@ phases:
       - # Replace with this to your repository URI
       - REPOSITORY_URI=943025321848.dkr.ecr.us-east-1.amazonaws.com/devsecopecr
       # 3. Build the Docker image (optional if already built)
-      - docker build -t devsecops-app .
+      - docker build -t devsecopecr .
       # 4. Tag the Docker image for ECR
-      - docker tag devsecops-app:latest $REPOSITORY_URI:latest
+      - docker tag devsecopecr:latest 943025321848.dkr.ecr.us-east-1.amazonaws.com/devsecopecr:latest
       # 5. Push the Docker image to ECR
       - docker push $REPOSITORY_URI:latest
       - IMAGE_TAG=build-$(echo $CODEBUILD_BUILD_ID | awk -F":" '{print $2}')
